@@ -1,0 +1,25 @@
+[project]
+name = "sensory-bridge"
+version = "0.1.0"
+description = "Sensory Bridge: RAG-powered sensory-overload support for equitable healthcare"
+readme = "README.md"
+authors = [
+    { name = "Productive Analytics", email = "prod8ctive.analytics@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.4.6",
+    "langchain-community>=0.4.2",
+    "langchain-oci>=0.3.2",
+    "llama-index>=0.14.25",
+    "llama-index-embeddings-oci-genai>=0.6.0",
+    "llama-index-llms-oci-genai>=0.8.0",
+    "oci>=2.188.0",
+]
+
+[project.scripts]
+sensory-bridge = "sensory_bridge:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
