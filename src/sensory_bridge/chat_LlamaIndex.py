@@ -15,7 +15,7 @@ from llama_index.core.llms import ChatMessage
 
 # Setup basic variables
 # Auth Config
-# TODO: Please update config profile name and use the compartmentId that has policies grant permissions for using Generative AI Service
+# Use config profile name and use the compartmentId that has policies grant permissions for using Generative AI Service
 COMPARTMENT_ID = "ocid1.tenancy.oc1..aaaaaaaafqljqdbzptld3oakqit7qafcg4iqohfr6da4mjdj5432ynhsutiq"
 AUTH_TYPE = "API_KEY" # The authentication type to use, e.g., API_KEY (default), SECURITY_TOKEN, INSTANCE_PRINCIPAL, RESOURCE_PRINCIPAL.
 CONFIG_PROFILE = "DEFAULT"
@@ -31,7 +31,7 @@ llm = OCIGenAI(
   provider="meta",
   context_size=600,
   additional_kwargs={
-"temperature": 1,
+    "temperature": 1,
     "max_tokens": 600,
     "frequency_penalty": 0,
     "presence_penalty": 0,

@@ -16,7 +16,7 @@ import oci
 
 # Setup basic variables
 # Auth Config
-# TODO: Please update config profile name and use the compartmentId that has policies grant permissions for using Generative AI Service
+# Use update config profile name and use the compartmentId that has policies grant permissions for using Generative AI Service
 compartment_id = "ocid1.tenancy.oc1..aaaaaaaafqljqdbzptld3oakqit7qafcg4iqohfr6da4mjdj5432ynhsutiq"
 CONFIG_PROFILE = "DEFAULT"
 config = oci.config.from_file(file_location='~/.oci/config', profile_name=CONFIG_PROFILE)
