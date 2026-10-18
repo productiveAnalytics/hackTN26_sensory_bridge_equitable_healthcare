@@ -1,0 +1,21 @@
+{
+  "request_id": "7c1f9a52",
+  "submitted_at": "2026-10-17T14:02:00Z",
+  "submitted_by": { "role": "guardian" },
+  "consent": { "share_with_care_team": true, "ehr_context_lookup": true },
+  "patient_ref": { "system": "oracle-health-millennium", "fhir_patient_id": "<synthetic-id>" },
+  "visit": { "appointment_id": "<id>", "type": "vaccination", "staff_roles": ["MA", "RN"] },
+  "sensory_profile": {
+    "communication": { "modes": ["AAC", "short_phrases"], "extra_processing_time": true },
+    "sensitivities": [
+      { "modality": "light", "level": "100", "mode": "mandatory", "note": "bright lights" },
+      { "modality": "touch", "level": "100", "mode": "mandatory", "note": "unexpected touch" },
+      { "modality": "sound", "level": "100", "mode": "mandatory", "note": "loud noises" },
+      { "modality": "smell", "level": "0", "mode": "optional", "note": "strong odors" }
+    ],
+    "calming": ["weighted lap pad", "tablet video"],
+    "transitions": "needs first-then visual schedule",
+    "prior_visit_issues": ["left before vitals; waiting room noise"]
+  },
+  "free_text": "optional, max 500 chars"
+}

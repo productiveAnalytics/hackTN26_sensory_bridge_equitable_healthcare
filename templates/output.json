@@ -1,0 +1,22 @@
+{
+  "plan_id": "sensory_plan_91ab",
+  "generated_at": "2026-10-17T14:02:11Z",
+  "status": "pending_review",
+  "patient_ref": { "system": "oracle-health-millennium", "fhir_patient_id": "<synthetic-id>" },
+  "visit": { "appointment_id": "<id>", "type": "vaccination", "staff_roles": ["MA", "RN"] },
+  "model": { "id": "meta.llama-3.3-70b-instruct", "region": "us-chicago-1" },
+  "sources_used": { "intake": true, "ehr": ["Condition/…", "Appointment/…"] },
+  "patient_alert": {
+    "channel": "in-app-notification",
+    "message": "Patient has high light and touch sensitivity. Use visual story and first-then card. Refer sensory plan for details.",
+    "urgency": "high"
+  },
+  "care_plan": {
+    "summary": "AAC user, high light and touch sensitivity, flu shot.",
+    "before_arrival": ["Send visual story to guardian"],
+    "room_setup": [{ "action": "Dim overhead lights", "reason": "light: high", "card_id": "ENV-03" }],
+    "steps": [{ "n": 1, "who": "MA", "do": "Show first-then card before any contact", "say": "First vaccine, then tablet.", "avoid": "Surprise touch", "card_id": "SEQ-01" }],
+    "stop_signs": [{ "sign": "Covers ears, turns away", "response": "Pause, offer break, notify clinician" }]
+  },
+  "guardrails": { "items_cited": 12, "uncited_dropped": 0, "diagnostic_language": false }
+}
